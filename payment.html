@@ -131,28 +131,38 @@
 
 			</div>
 
-		<!-- Main -->
-			<div id="main">
-  			  <!-- Amount Change -->
-					<section id="about" class="three">
+		<div id="main">
+
+				<!-- Contact -->
+					<section id="contact" class="four">
 						<div class="container">
-							<div class="dc">
-								<header style="display: inline-block;margin-bottom: 5px">
-									<h2>Current Amonut</h2>
-									<h3 style="color:green"><span id="oldA">100</span> Euro</h3>
-								</header>
-								<div>
-									<label>The Amount:</label>
-									<input type="text" id="newA" name="NewAmount" style="margin-left:5px " />
-									<br/>
-									<input type="button" value="submit" class="leftbutton" onclick="showInf()" />
-									<label id="Information" style="display: inline-block; margin-top: 30px">
-										
-									</label>
-								<!--	<input type="button" value="reset" class="rightbutton"/>-->
+
+							<header>
+								<h2>Payment</h2>
+							</header>
+
+						
+							<form method="post" action="#">
+								<div class="row">
+                                  <div class="3u 12u$(mobile)" type="text" >IBAN:</div>   
+								  <div class="8u 12u$(mobile)"><input type="text" name="name" placeholder="DE46390XXXXXXXXXXXX200" /></div>
+	                              <div class="3u 12u$(mobile)" type="text" >Abschlage Date:</div> 
+                                  <div class="8u$ 12u$(mobile)"> 
+                                      <input type="text" name="date" placeholder="7., 15., 23. oder 30. eines Monats" />
+								  </div>
+								   <div class="3u 12u$(mobile)" type="text" >Abschlagszyklus:</div>
+								  <div class="8u 12u(mobile)"> 
+                                      <input type="text" name="frequence" placeholder="1, 2, oder 6 Monats" />
+								  </div>
+								  <div class="1u 12u$(mobile)" type="text" >Monat(s)</div>
+									<div class="12u$">
+										<!--<form href="index.html">-->
+										<input type="button" value="Change it" onclick="window.location.href='index.html'" />
+										<!--</form>-->
+									</div>
 								</div>
-							
-							</div>
+							</form>
+
 						</div>
 					</section>
 

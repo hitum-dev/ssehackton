@@ -36,7 +36,7 @@
 			 } else {
 			 	var var2=document.getElementById('Information');
 				var2.innerText="We have received your request, we will contact you soon!";
-				var2.style.color="orange";
+				var2.style.color="oragne";
 
 			}
 		}
@@ -72,7 +72,7 @@
 		#about{
 			height: 80vh;
 		}
-
+		
 	</style>
 	<body>
 
@@ -136,23 +136,46 @@
   			  <!-- Amount Change -->
 					<section id="about" class="three">
 						<div class="container">
-							<div class="dc">
-								<header style="display: inline-block;margin-bottom: 5px">
-									<h2>Current Amonut</h2>
-									<h3 style="color:green"><span id="oldA">100</span> Euro</h3>
+							<header style="display: inline-block;margin-bottom: 5px min-width: 218px">
+									<image src="images/tx.jpg" height="100" width="100" style="float:left"></image>
+									<div style="display: inline-block;width=100;margin-left: 10px">
+										<table>
+											<tr>
+												<td align="right">Last Name:&nbsp&nbsp </td>
+												<td align="left">Sun</td>
+											</tr>
+											<tr>
+												<td align="right">First Name:&nbsp&nbsp  </td>
+												<td align="left">Lei</td>
+											</tr>
+											<tr>
+												<td align="right">Gender:&nbsp&nbsp  </td>
+												<td align="left">Male</td>
+											</tr>
+										</table>							
+										</div>
 								</header>
-								<div>
-									<label>The Amount:</label>
-									<input type="text" id="newA" name="NewAmount" style="margin-left:5px " />
-									<br/>
-									<input type="button" value="submit" class="leftbutton" onclick="showInf()" />
-									<label id="Information" style="display: inline-block; margin-top: 30px">
-										
-									</label>
-								<!--	<input type="button" value="reset" class="rightbutton"/>-->
+								<br/>
+								<div style="display: inline-block;margin-top: -50px;min-width:218px">
+									<table>
+											<tr>
+											<td><span class="icon fa-map"/>&nbsp &nbsp</td>
+												<td align="left">Monheimsallee 4, Aachen, 52062 </td>
+												
+											</tr>
+											<tr>
+											<td><span class="icon fa-volume-control-phone"/>&nbsp &nbsp</td>
+												<td align="left">+49 15903520299  </td>
+												
+											</tr>
+											<tr>
+											<td><span class="icon fa-paper-plane"/>&nbsp &nbsp</td>
+												<td align="left">sunlei.albert@gmail.com </td>
+					
+											</tr>
+										</table>							
+										</div>
 								</div>
-							
-							</div>
 						</div>
 					</section>
 
