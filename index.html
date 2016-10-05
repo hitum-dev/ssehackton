@@ -102,7 +102,54 @@
 			height: 80vh;
 		}
 
+@media (min-width: 992px) {
+  .tile_count .tile_stats_count:first-child:before {
+    border-left: 0; } }
+.tile_count .tile_stats_count .count {
+   
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 600; }
+
+@media (min-width: 768px) {
+  .tile_count .tile_stats_count .count {
+    font-size: 30px;
+    color: #555;
+    display:block;
+    } }
+@media (min-width: 992px) and (max-width: 1100px) {
+  .tile_count .tile_stats_count .count {
+    font-size: 15px; } }
+.tile_count .tile_stats_count span {
+  font-size: 15px; }
+
+@media (min-width: 768px) {
+  .tile_count .tile_stats_count span {
+    font-size: 10px; } }
+.tile_count .tile_stats_count .count_bottom i {
+  width: 45px; 
+color: green;}
+
+.tile_count .tile_stats_count .count_red i {
+  width: 12px; 
+color: red;}
+
+.tile_count .tile_stats_count .count_green i {
+  width: 70px; 
+color: green;}
+
+
+
+.col-md-55, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  padding-right: 100px;
+  padding-left: 100px; }
+
 	</style>
+	<script type="text/javascript" src="robot/robot.js?022107"></script>
+
 	<body>
 
 		<!-- Header -->
@@ -136,13 +183,23 @@
 
 		<!-- Main -->
 			<div id="main">
-  			  <!-- Amount Change -->
-					<section id="about" class="three">
-						<p>Current Monthly Cost = 30 Euro</p>
-						<p id = "curve_chart" align="center" width=device height=device></p>
-					</section>
-
-
+                      <div class="row tile_count">
+			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+              <div class="count">2500</div>
+              <span class="count_red"><i >4% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+              <div class="count">123.50</div>
+              <span class="count_bottom"><i class="green">3% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+              <div class="count">123.50</div>
+              <span class="count_bottom"><i class="green">3% </i> From last Week</span>
+            </div>
+			</div>
 			</div>
 
 
