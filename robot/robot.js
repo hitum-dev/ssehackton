@@ -11341,7 +11341,7 @@
 			{
 				O.text = "You can transfer to us with your user name";
 			};
-			
+
 			var $ele = $('<div class="'+ cssfix +'chat-replay"><div class="'+ cssfix +'chat-headimg" >'+ O.img +'</div><div class="'+ cssfix +'chat-name">'+ O.nick +' '+ _dateFormat.call(O.time,'hh:mm:ss') +'</div><table class="'+ cssfix +'msg" cellspacing="0" cellpadding="0"><tbody><tr><td class="bg-msg-lr '+ cssfix +'msg-lt"></td><td class="bg-msg-tb '+ cssfix +'msg-tt"></td><td class="bg-msg-lr '+ cssfix +'msg-rt"></td></tr><tr><td class="bg-msg-lr '+ cssfix +'msg-lm"><span class="bg-msg-lr"></span></td><td class="'+ cssfix +'msg-mm"><div class="'+ cssfix +'htmcont">'+ O.text +'</div></td><td class="bg-msg-lr '+ cssfix +'msg-rm"></td></tr><tr><td class="bg-msg-lr '+ cssfix +'msg-lb"></td><td class="bg-msg-tb '+ cssfix +'msg-bm"></td><td class="bg-msg-lr '+ cssfix +'msg-rb"></td></tr><tr><td></td></tr></tbody></table></div>');
 			$ele.find('img').each(function(){
 				this.onload = function(){
