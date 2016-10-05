@@ -11,9 +11,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
+	<script type="text/javascript" src="robot/robot.js?022107"></script>
 	<script type="text/javascript">
 		function showInf() {
 			var var1=document.getElementById('newA').value;
@@ -41,7 +43,31 @@
 			}
 		}
 		}
+
+
+
 	</script>
+
+	<script type="text/javascript">
+     $(document).ready(function(){
+     	
+     
+
+
+     	 $("#2").delay(1000).fadeIn(1000);
+     	 $("#3").delay(1000).fadeIn(1000);
+     	$("#4").delay(2000).fadeIn(1000);
+     	$("#5").delay(2000).fadeIn(1000);
+     	$("#6").delay(3000).fadeIn(1000);
+     	$("#7").delay(3000).fadeIn(1000);
+     	$("#8").delay(4000).fadeIn(1000);
+     	$("#9").delay(4000).fadeIn(1000);
+     	$("#10").delay(5000).fadeIn(1000);
+     	$("#11").delay(5000).fadeIn(1000);
+     	$("#12").delay(6000).fadeIn(1000);
+     	$("#13").delay(6000).fadeIn(1000);
+     });
+</script>
 	<style type="text/css">
 		.leftbutton{
 			float: left;
@@ -72,6 +98,21 @@
 		#about{
 			height: 80vh;
 		}
+
+		a:hover>span{
+			background-color: orange;
+			color:white;
+		}
+
+		.td1{
+			width: 120px;
+			font-weight: bold;
+			
+		}
+		.td2{
+			width: 280px;
+		}
+
 		
 	</style>
 	<body>
@@ -134,23 +175,37 @@
 		<!-- Main -->
 			<div id="main">
   			  <!-- Amount Change -->
-					<section id="about" class="three">
+					<section id="about" class="three" style="margin:auto">
 						<div class="container">
-							<header style="display: inline-block;margin-bottom: 5px min-width: 218px">
-									<image src="images/tx.jpg" height="100" width="100" style="float:left"></image>
-									<div style="display: inline-block;width=100;margin-left: 10px">
-										<table>
+							<header style="display: inline-block;margin:auto; min-width: 218px">
+									<div style="display: inline-block;margin:auto">
+										<table style="margin:auto">
 											<tr>
-												<td align="right">Last Name:&nbsp&nbsp </td>
-												<td align="left">Sun</td>
+												<td class="td1" id="2" align="left" style="display: none">Last Name: &nbsp&nbsp</td>
+												<td class="td2" id="3" align="right"  style="display: none"><input type="text" placeholder="Sun"  style="border:0px;background: transparent;text-align: right"></td>
 											</tr>
 											<tr>
-												<td align="right">First Name:&nbsp&nbsp  </td>
-												<td align="left">Lei</td>
+												<td class="td1" id="4" align="left" style="display: none">First Name:&nbsp&nbsp  </td>
+												<td class="td2" id="5" align="right" style="display: none"><input type="text" placeholder="Lei"  style="border:0px;background: transparent;text-align: right"></td>
 											</tr>
 											<tr>
-												<td align="right">Gender:&nbsp&nbsp  </td>
-												<td align="left">Male</td>
+												<td class="td1" id="6" align="left" style="display: none">Gender:&nbsp&nbsp  </td>
+												<td class="td2" id="7" align="right" style="display: none"><input type="text" placeholder="Male"  style="border:0px;background: transparent;text-align: right"></td>
+											</tr>
+											<tr>
+											<td class="td1" id="8" align="left" style="display: none" >Address:&nbsp&nbsp</td>
+												<td class="td2" id="9" align="right" style="display: none"><input type="text" placeholder="Monheimsallee 4,Aachen,52062"  style="border:0px;background: transparent;text-align: right;width: 280px"></td>
+												
+											</tr>
+											<tr>
+											<td id="10" class="td1" align="left" style="display: none" >Phone:&nbsp&nbsp</td>
+												<td id="11" class="td2" style="display: none"  align="right"><input type="text" placeholder="+49 15903520299"  style="border:0px;background: transparent;text-align: right;width: 280px"></td>
+												
+											</tr>
+											<tr>
+											<td id="12" class="td1" align="left" style="display: none" >Email:&nbsp&nbsp</td>
+												<td id="13"  class="td2" align="right" style="display: none"><input type="text" placeholder="sunlei.albert@gmail.com"  style="border:0px;background: transparent;text-align: right;width: 280px"> </td>
+					
 											</tr>
 										</table>							
 										</div>
@@ -158,21 +213,7 @@
 								<br/>
 								<div style="display: inline-block;margin-top: -50px;min-width:218px">
 									<table>
-											<tr>
-											<td><span class="icon fa-map"/>&nbsp &nbsp</td>
-												<td align="left">Monheimsallee 4, Aachen, 52062 </td>
-												
-											</tr>
-											<tr>
-											<td><span class="icon fa-volume-control-phone"/>&nbsp &nbsp</td>
-												<td align="left">+49 15903520299  </td>
-												
-											</tr>
-											<tr>
-											<td><span class="icon fa-paper-plane"/>&nbsp &nbsp</td>
-												<td align="left">sunlei.albert@gmail.com </td>
-					
-											</tr>
+											
 										</table>							
 										</div>
 								</div>

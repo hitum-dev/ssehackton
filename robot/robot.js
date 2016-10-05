@@ -10485,7 +10485,7 @@
 			/*最小高度*/
 			, 'minHeight': 576
 			/*头部title文本*/
-			, 'title': '竭诚为您服务'
+			, 'title': 'Honor to Service You'
 			/*快速提交问题列表*/
 			, 'quicks': []
 			/*左侧工具栏，格式{label: '文本',icon: 'icon图标地址60*60', href:'连接的地址'}*/
@@ -10505,7 +10505,7 @@
 			/*显示版权信息*/
 			, 'showCopyright': true
 			/*是否显示Copyright信息*/
-			, 'placeholder': '请简要描述您的问题，如“退换货运费怎么算”'
+			, 'placeholder': 'Please describe your requirement'
 			/*文本框提示文本*/
 			, 'url': 'http://api.smartnlp.cn/cloud/-/'
 			/*请求的接口地址*/

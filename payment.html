@@ -73,6 +73,12 @@
 			height: 80vh;
 		}
 
+		a:hover>span{
+			background-color: orange;
+			color:white;
+		}
+
+
 	</style>
 	<body>
 
@@ -148,11 +154,26 @@
 								  <div class="8u 12u$(mobile)"><input type="text" name="name" placeholder="DE46390XXXXXXXXXXXX200" /></div>
 	                              <div class="3u 12u$(mobile)" type="text" >Abschlage Date:</div> 
                                   <div class="8u$ 12u$(mobile)"> 
-                                      <input type="text" name="date" placeholder="7., 15., 23. oder 30. eines Monats" />
+                                      <!--<input type="text" name="date" placeholder="7., 15., 23. oder 30. eines Monats" />
+								  -->
+								  <select>
+								  	
+								      <option value ="7">7</option>
+  									  <option value ="15">15</option>
+  									  <option value="23">23</option>
+                                      <option value="39">39</option>
+
+								  </select>
 								  </div>
 								   <div class="3u 12u$(mobile)" type="text" >Abschlagszyklus:</div>
-								  <div class="8u 12u(mobile)"> 
-                                      <input type="text" name="frequence" placeholder="1, 2, oder 6 Monats" />
+								  <div class="8u 12u$(mobile)"> 
+                                      <select>
+								  	
+								      <option value ="1">1</option>
+  									  <option value ="3">3</option>
+  									  <option value="6">6</option>
+                                      
+								  </select>
 								  </div>
 								  <div class="1u 12u$(mobile)" type="text" >Monat(s)</div>
 									<div class="12u$">

@@ -1,22 +1,25 @@
 <!DOCTYPE HTML>
 <!--
 	Prologue by HTML5 UP
-	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>mainpage</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-	<script type="text/javascript">
+<head>
+	<title>mainpage</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!-- 引入 echarts.js -->
+	<script src="echarts.min.js"></script>
+</head>
+<script type="text/javascript" src="robot/robot.js?022107"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
 		function showInf() {
 			var var1=document.getElementById('newA').value;
 			var1=parseInt(var1);
@@ -71,103 +74,171 @@
 
 
 	</script>
-	<style type="text/css">
-		.leftbutton{
-			float: left;
-			margin-top: 10px;
-			height: 10px;
-			width: 292px;
-			display: inline-block;
+<style type="text/css">
+	.leftbutton {
+		float: left;
+		margin-top: 10px;
+		height: 10px;
+		width: 292px;
+		display: inline-block;
+		color: white;
+		line-height: 0px
+	}
+	
+	.rightbutton {
+		float: right;
+		margin-top: 10px;
+		height: 10px;
+		width: 141px;
+		display: inline-block;
+		color: white;
+		line-height: 0px
+	}
+	
+	.dc {
+		width: 292px;
+		max-width: 292px;
+		display: inline-block;
+	}
+	
+	#about {
+		height: 80vh;
+	}
+	
+	@media (min-width: 992px) {
+		.tile_count .tile_stats_count:first-child:before {
+			border-left: 0;
+		}
+	}
+	
+	.tile_count .tile_stats_count .count {
+		font-size: 15px;
+		line-height: 50%;
+		font-weight: 50%;
+	}
+	
+	@media (min-width: 768px) {
+		.tile_count .tile_stats_count .count {
+			font-size: 30px;
+			color: #555;
+			display: block;
+		}
+	}
+	
+	@media (min-width: 992px) and (max-width: 1100px) {
+		.tile_count .tile_stats_count .count {
+			font-size: 15px;
+		}
+	}
+	
+	.tile_count .tile_stats_count span {
+		font-size: 15px;
+	}
+	
+	@media (min-width: 768px) {
+		.tile_count .tile_stats_count span {
+			font-size: 16px;
+		}
+	}
+	
+	.tile_count .tile_stats_count .count_bottom i {
+		width: 45px;
+		color: green;
+	}
+	
+	.tile_count .tile_stats_count .count_red i {
+		width: 12px;
+		color: red;
+	}
+	
+	.tile_count .tile_stats_count .count_green i {
+		width: 70px;
+		color: green;
+	}
+
+	a:hover>span{
+			background-color: orange;
 			color:white;
-			line-height: 0px
-			
-		}
-		.rightbutton{
-			float: right;
-			margin-top: 10px;
-			height: 10px;
-			width: 141px;
-			display: inline-block;
-			color:white;
-			line-height: 0px
-			
-		}
-		.dc{
-			width: 292px;
-			max-width: 292px;
-			display: inline-block;
-
-		}
-		#about{
-			height: 80vh;
 		}
 
-@media (min-width: 992px) {
-  .tile_count .tile_stats_count:first-child:before {
-    border-left: 0; } }
-.tile_count .tile_stats_count .count {
-   
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 600; }
-
-@media (min-width: 768px) {
-  .tile_count .tile_stats_count .count {
-    font-size: 30px;
-    color: #555;
-    display:block;
-    } }
-@media (min-width: 992px) and (max-width: 1100px) {
-  .tile_count .tile_stats_count .count {
-    font-size: 15px; } }
-.tile_count .tile_stats_count span {
-  font-size: 15px; }
-
-@media (min-width: 768px) {
-  .tile_count .tile_stats_count span {
-    font-size: 10px; } }
-.tile_count .tile_stats_count .count_bottom i {
-  width: 45px; 
-color: green;}
-
-.tile_count .tile_stats_count .count_red i {
-  width: 12px; 
-color: red;}
-
-.tile_count .tile_stats_count .count_green i {
-  width: 70px; 
-color: green;}
 
 
+	.col-md-55,
+	.col-xs-1,
+	.col-sm-1,
+	.col-md-1,
+	.col-lg-1,
+	.col-xs-2,
+	.col-sm-2,
+	.col-md-2,
+	.col-lg-2,
+	.col-xs-3,
+	.col-sm-3,
+	.col-md-3,
+	.col-lg-3,
+	.col-xs-4,
+	.col-sm-4,
+	.col-md-4,
+	.col-lg-4,
+	.col-xs-5,
+	.col-sm-5,
+	.col-md-5,
+	.col-lg-5,
+	.col-xs-6,
+	.col-sm-6,
+	.col-md-6,
+	.col-lg-6,
+	.col-xs-7,
+	.col-sm-7,
+	.col-md-7,
+	.col-lg-7,
+	.col-xs-8,
+	.col-sm-8,
+	.col-md-8,
+	.col-lg-8,
+	.col-xs-9,
+	.col-sm-9,
+	.col-md-9,
+	.col-lg-9,
+	.col-xs-10,
+	.col-sm-10,
+	.col-md-10,
+	.col-lg-10,
+	.col-xs-11,
+	.col-sm-11,
+	.col-md-11,
+	.col-lg-11,
+	.col-xs-12,
+	.col-sm-12,
+	.col-md-12,
+	.col-lg-12 {
+		position: relative;
+		/*min-height: 1px;*/
+		float: left;
+		padding-right: 100px;
+		padding-left: 100px;
 
-.col-md-55, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  float: left;
-  padding-right: 100px;
-  padding-left: 100px; }
+	}
+</style>
 
-	</style>
-	<script type="text/javascript" src="robot/robot.js?022107"></script>
+<body>
 
-	<body>
+	<!-- Header -->
+	<div id="header">
 
-		<!-- Header -->
-			<div id="header">
+		<div class="top">
 
-				<div class="top">
+			<!-- Logo -->
+			<div id="logo">
+				<span class="image avatar48"><a href="profile.html"><img src="images/tx.jpg" alt="" /></a></span>
+				<h1 id="title">Lei Sun</h1>
+				<p>Customer</p>
+			</div>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><a href="profile.html"><img src="images/tx.jpg" alt="" /></a></span>
-							<h1 id="title">Lei Sun</h1>
-							<p>Customer</p>
-						</div>
+			<!-- Nav -->
+			<nav id="nav">
 
-					<!-- Nav -->
-						<nav id="nav">
-							
-								<ul>
+				<ul>
 								<li><a href="index.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 								<li><a href="profile.html" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Profile</span></a></li>
 								<li><a href="AC.html" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-money">Amount Change
@@ -176,50 +247,132 @@ color: green;}
 								<li><a href="SignIn.html" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-sign-out">Sign Out</span></a></li>
 							
 							</ul>
-						</nav>
-				</div>
+			</nav>
+		</div>
 
-			</div>
+	</div>
 
-		<!-- Main -->
-			<div id="main">
-                      <div class="row tile_count">
+	<!-- Main -->
+	<div id="main">
+	 
+		 	<div class="row tile_count">
 			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-              <div class="count">2500</div>
-              <span class="count_red"><i >4% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-              <div class="count">123.50</div>
-              <span class="count_bottom"><i class="green">3% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-              <div class="count">123.50</div>
-              <span class="count_bottom"><i class="green">3% </i> From last Week</span>
-            </div>
+				<span class="count_top"><i class="fa fa-user"></i> Monthly cost</span>
+				<div class="count">15.0€</div>
+				<span class="count_red">From 2015</span>
 			</div>
+			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+				<span class="count_top"><i class="fa fa-clock-o"></i> Current Cost</span>
+				<div class="count">12.35€</div>
+				<span class="count_bottom"><i class="green">2.1% </i> till 27.08</span>
 			</div>
-
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="#">RWTH SSE</a></li>
-					</ul>
-
+			<div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+				<span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+				<div class="count">13.50€</div>
+				<!--<span class="count_red"><i class="red">3% </i></span>-->
 			</div>
+		</div>
+        
+		<div class="row">
+		 <div id="chart"  style="margin:5px 10px 20px 30px;width: 800px;height:380px;"></div>
+		 </div>
+	     <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('chart'));
+        // 指定图表的配置项和数据
+        option = {
+            title: {
+                text: 'Payment History and Forcast',
+                subtext: 'by Innogy',
+                top: 'top'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    dataView: {readOnly: false},
+                    magicType: {type: ['line', 'bar']},
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            xAxis:  {
+                type: 'category',
+                boundaryGap: false,
+                data: ['2011','2012','2013','2014','2015','2016','2017'],
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value} €'
+                }
+            },
+            series: [
+                {
+                    name:'payment',
+                    type:'line',
+                    data:[0, 91, 80, 73, 62, 93, 100],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: 'maxcost'},
+                            {type: 'min', name: 'minalcost'}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: 'average'}
+                        ]
+                    },
+                    lineStyle:{normal:{ color:'rgb(128, 0, 128)'}} //line's color
+                },
+				{
+                    name:'payment',
+                    type:'bar',
+                    data:[0, 91, 80, 73, 62, 93, 100],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: 'maxcost'},
+                            {type: 'min', name: 'minalcost'}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: 'average'}
+                        ]
+                    },
+                    barStyle:{normal:{ color:'rgb(128, 20, 228)'}} //line's color
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	
 
-	</body>
+	<!-- Footer -->
+	<div id="footer">
+
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Untitled. All rights reserved.</li>
+			<li>Design: <a href="#">RWTH SSE</a></li>
+		</ul>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollzer.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
