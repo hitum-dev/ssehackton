@@ -10403,6 +10403,7 @@
 		return html.join('');
 	};
 
+	var send_context = "";
 	//生成随机编号
 	var _getRndId = function(){
 		var timestamp = Math.floor(new Date().getTime() / 100 - 10000000000).toString(36)
@@ -11294,7 +11295,7 @@
 				};
 				e.preventDefault && e.preventDefault();
 			});
-		}
+		} 
 		//生成发送消息的HTML
 		, cSendEle: function(opt){
 			var _this = this
@@ -11308,6 +11309,7 @@
 			}, opt);
 			//是否转码输出
 			O.text = !O.encode ? O.text : _htmlEncode(O.text);
+			send_context = O.text;
 			var $ele = $('<div class="'+ cssfix +'chat-ask"><div class="'+ cssfix +'chat-headimg"></div><div class="'+ cssfix +'chat-name">'+ O.nick +' '+ _dateFormat.call(O.time,'hh:mm:ss') +'</div><table class="'+ cssfix +'msg" cellspacing="0" cellpadding="0"><tbody><tr><td class="'+ cssfix +'msg-lt bg-msg-lr"></td><td class="'+ cssfix +'msg-tt bg-msg-tb"></td><td class="'+ cssfix +'msg-rt bg-msg-lr"></td></tr><tr><td class="'+ cssfix +'msg-lm bg-msg-lr"></td><td class="'+ cssfix +'msg-mm">'+ O.text +'</td><td class="'+ cssfix +'msg-rm bg-msg-lr"><span class="bg-msg-lr"></span></td></tr><tr><td class="'+ cssfix +'msg-lb bg-msg-lr"></td><td class="'+ cssfix +'msg-bm bg-msg-tb"></td><td class="'+ cssfix +'msg-rb bg-msg-lr"></td></tr></tbody></table></div>');
 			$ele.find('.smartnlp-robot-msg-img').each(function(){
 				this.onload = function(){
@@ -11317,6 +11319,7 @@
 			});
 			return $ele;
 		}
+
 		//生成返回消息的HTML
 		, cReplyEle: function(opt){
 			var _this = this
@@ -11327,7 +11330,13 @@
 				, 'nick': _con.nick
 				, 'img': (!!_con.headImg ? '<img src="'+ _con.headImg +'"/>' : '')
 			}, opt);
-			
+			if (send_context == "hello") {
+				O.text = "what could I do for you?";
+			};
+			if (send_context == "I want to change my password")
+			{
+				O.text = "You can call my colleague";
+			}
 			var $ele = $('<div class="'+ cssfix +'chat-replay"><div class="'+ cssfix +'chat-headimg" >'+ O.img +'</div><div class="'+ cssfix +'chat-name">'+ O.nick +' '+ _dateFormat.call(O.time,'hh:mm:ss') +'</div><table class="'+ cssfix +'msg" cellspacing="0" cellpadding="0"><tbody><tr><td class="bg-msg-lr '+ cssfix +'msg-lt"></td><td class="bg-msg-tb '+ cssfix +'msg-tt"></td><td class="bg-msg-lr '+ cssfix +'msg-rt"></td></tr><tr><td class="bg-msg-lr '+ cssfix +'msg-lm"><span class="bg-msg-lr"></span></td><td class="'+ cssfix +'msg-mm"><div class="'+ cssfix +'htmcont">'+ O.text +'</div></td><td class="bg-msg-lr '+ cssfix +'msg-rm"></td></tr><tr><td class="bg-msg-lr '+ cssfix +'msg-lb"></td><td class="bg-msg-tb '+ cssfix +'msg-bm"></td><td class="bg-msg-lr '+ cssfix +'msg-rb"></td></tr><tr><td></td></tr></tbody></table></div>');
 			$ele.find('img').each(function(){
 				this.onload = function(){
@@ -11420,10 +11429,10 @@
 	]
 	//左侧工具栏，格式{label: '文本',icon: 'icon图标地址60*60', 
 	, 'tools': [
-		{label: '天气预报',icon: 'http://img.alicdn.com/imgextra/i3/TB16M.kJpXXXXXAXVXXwu0bFXXX.png', href:'#'}
-		, {label: '听首歌',icon: 'http://img.alicdn.com/imgextra/i3/TB17xcEJpXXXXXfXXXXwu0bFXXX.png', href:'#'}
-		, {label: '指南针',icon: 'http://img.alicdn.com/imgextra/i1/TB10VUAJpXXXXczXXXXwu0bFXXX.png', href:'#'}
-		, {label: '常用帮助',icon: 'http://img.alicdn.com/imgextra/i2/TB1FX7tJpXXXXccXpXXwu0bFXXX.png', href:'#'}
+		{label: 'Wether',icon: 'http://img.alicdn.com/imgextra/i3/TB16M.kJpXXXXXAXVXXwu0bFXXX.png', href:'#'}
+		, {label: 'Music',icon: 'http://img.alicdn.com/imgextra/i3/TB17xcEJpXXXXXfXXXXwu0bFXXX.png', href:'#'}
+		, {label: 'Video',icon: 'http://img.alicdn.com/imgextra/i1/TB10VUAJpXXXXczXXXXwu0bFXXX.png', href:'#'}
+		, {label: 'Help',icon: 'http://img.alicdn.com/imgextra/i2/TB1FX7tJpXXXXccXpXXwu0bFXXX.png', href:'#'}
 	]
 	//浮动层zindex
 	//, zindex: 999
@@ -11444,7 +11453,7 @@
 	//机器人欢迎语
 	, 'welcome': 'Hi，I am $name'
 	//人工客服欢迎语
-	, 'kefuWelcome': 'Good Morning，$name 为您服务!'
+	, 'kefuWelcome': 'Good Morning，$name serve to you!'
 	//机器人昵称
 	, 'nick': 'MicrosoftBot'
 	//消息发送后文本框是否自动失去焦点
