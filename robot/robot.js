@@ -10625,7 +10625,7 @@
 										_isConnChat = 1;
 										cb(true);
 										con.call('methodTheRequiresBeingLoggedIn', function () {
-    										_this.log(kfNick +' 为您服务');
+    										_this.log(kfNick +' serve you');
 											var rid;
 											con.call("createDirectMessage", kfName, function(error,result){
 												rid = result.rid;
