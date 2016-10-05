@@ -10391,7 +10391,7 @@
 			if(_con.codeImg !== null){
 				html.push('<li class="'+ cssfix +'code"><a href="javascript:void(0);">');
 				html.push('<i style="background-image:url('+ _con.codeImg+');"></i>');
-				html.push('<span>公众号</span>');
+				html.push('<span>homepage</span>');
 				html.push('</a></li>');
 			};
 			html.push('<div class="'+ cssfix +'big-code"><img src="'+ _con.codeImg +'"/></div>')
@@ -10737,7 +10737,7 @@
 			}else if(_isLoadChatJs === 1){
 				connKefu();
 			};
-			_this.showwait('请求人工客服…');
+			_this.showwait('Asking service by person');
 		}
 		//是否人工客服模式
 		, 'iskf': false
@@ -10887,7 +10887,7 @@
 							return false;
 						}
 					}catch(e){};
-					_this.showwait('图片上传中…');
+					_this.showwait('Uploding…');
 
 					if ($fileInput.val() !== ""){
 
@@ -11302,7 +11302,7 @@
 			var O = $.extend({
 				'text': '&nbsp;'
 				, 'time': new Date()
-				, 'nick': '我'
+				, 'nick': 'me'
 				, 'encode': true
 				, 'img': ''
 			}, opt);
@@ -11327,6 +11327,7 @@
 				, 'nick': _con.nick
 				, 'img': (!!_con.headImg ? '<img src="'+ _con.headImg +'"/>' : '')
 			}, opt);
+			
 			var $ele = $('<div class="'+ cssfix +'chat-replay"><div class="'+ cssfix +'chat-headimg" >'+ O.img +'</div><div class="'+ cssfix +'chat-name">'+ O.nick +' '+ _dateFormat.call(O.time,'hh:mm:ss') +'</div><table class="'+ cssfix +'msg" cellspacing="0" cellpadding="0"><tbody><tr><td class="bg-msg-lr '+ cssfix +'msg-lt"></td><td class="bg-msg-tb '+ cssfix +'msg-tt"></td><td class="bg-msg-lr '+ cssfix +'msg-rt"></td></tr><tr><td class="bg-msg-lr '+ cssfix +'msg-lm"><span class="bg-msg-lr"></span></td><td class="'+ cssfix +'msg-mm"><div class="'+ cssfix +'htmcont">'+ O.text +'</div></td><td class="bg-msg-lr '+ cssfix +'msg-rm"></td></tr><tr><td class="bg-msg-lr '+ cssfix +'msg-lb"></td><td class="bg-msg-tb '+ cssfix +'msg-bm"></td><td class="bg-msg-lr '+ cssfix +'msg-rb"></td></tr><tr><td></td></tr></tbody></table></div>');
 			$ele.find('img').each(function(){
 				this.onload = function(){
