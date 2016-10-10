@@ -18,62 +18,6 @@
 </head>
 <script type="text/javascript" src="robot/robot.js?022107"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<script type="text/javascript">
-		function showInf() {
-			var var1=document.getElementById('newA').value;
-			var1=parseInt(var1);
-			if (isNaN(var1)) {
-				var var2=document.getElementById('Information');
-				document.getElementById('newA').value="";
-				var2.innerText="Input Error, Please input the amount again!";
-				var2.style.color="red";
-
-			} else {
-			var var4=document.getElementById('oldA').innerText;
-            var4=parseInt(var4);
-			if (var1>=var4) {
-				var var2=document.getElementById('Information');
-				var2.innerText="Successfully Increase the amount!";
-				var2.style.color="green";
-				var var3=document.getElementById('oldA');
-				var3.innerText=var1;
-			 } else {
-			 	var var2=document.getElementById('Information');
-				var2.innerText="We have received your request, we will contact you soon!";
-				var2.style.color="oragne";
-
-			}
-		}
-		}
-
-		google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Month', 'Cost'],
-          ['January',  1000],
-          ['February',  1170],
-          ['March',  660],
-          ['April',  1030]
-        ]);
-
-        var options = {
-          title: 'Electricity Cost Statistic',
-          curveType: 'function',
-          legend: { position: 'bottom' },
-          backgroundColor: "e8edec",
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-
-        chart.draw(data, options);
-      }
-
-
-	</script>
 <style type="text/css">
 	.leftbutton {
 		float: left;
