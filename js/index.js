@@ -36,7 +36,7 @@ $(document).ready(function() {
         //$login.addClass("inactive");
         animating = false;
         //$(that).removeClass("success processing");
-        window.location.href="index.html";
+        window.location.href="index2.html";
       }, submitPhase2);
     }, submitPhase1);
   });
